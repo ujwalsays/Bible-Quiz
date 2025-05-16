@@ -4,128 +4,109 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>✝️ Emmanual Ministry Online Exam ✝️</title>
+  <title>✝️ Emmanual Ministry Bible Quiz ✝️</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #e8eaf6, #f3e5f5);
+      color: #333;
+      padding: 20px;
+      margin: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      text-align: center;
+      color: #4a148c;
+    }
+    p {
+      text-align: center;
+      font-size: 1.1em;
+    }
+    label, li {
+      font-weight: bold;
+    }
+    button {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      margin-top: 20px;
+      background-color: #4a148c;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #6a1b9a;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0 20px 0;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    ol {
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 15px;
+    }
+  </style>
 </head>
 <body>
-  <h2>✝️ Emmanual Ministry Online Exam (ऑनलाइन परीक्षा) ✝️</h2>
-  <p>विषय: बाइबल ज्ञान | कुल अंक: 30 | समय: 30 मिनट</p>
+  <div class="container">
+    <h2>✝️ Emmanual Ministry Online Exam (ऑनलाइन परीक्षा) ✝️</h2>
+    <p>विषय: बाइबल ज्ञान | कुल अंक: 30 | समय: 30 मिनट</p>
 
-  <form id="quizForm">
-    <label for="name">नाम:</label>
-    <input type="text" id="name" name="name" required><br><br>
+    <form id="quizForm">
+      <label for="name">नाम:</label>
+      <input type="text" id="name" name="name" required>
 
-    <ol>
-      <li>यीशु मसीह का जन्म कहाँ हुआ था?<br>
-        <input type="radio" name="q1" value="यरूशलेम"> यरूशलेम<br>
-        <input type="radio" name="q1" value="नासरत"> नासरत<br>
-        <input type="radio" name="q1" value="बैतलहम"> बैतलहम<br>
-        <input type="radio" name="q1" value="मिश्र"> मिश्र<br><br>
-      </li>
+      <ol>
+        <li>यीशु मसीह का जन्म कहाँ हुआ था?<br>
+          <input type="radio" name="q1" value="यरूशलेम"> यरूशलेम<br>
+          <input type="radio" name="q1" value="नासरत"> नासरत<br>
+          <input type="radio" name="q1" value="बैतलहम"> बैतलहम<br>
+          <input type="radio" name="q1" value="मिश्र"> मिश्र<br><br>
+        </li>
 
-      <li>बाइबल के पहले पुस्तक का नाम क्या है?<br>
-        <input type="radio" name="q2" value="उत्पत्ति"> उत्पत्ति<br>
-        <input type="radio" name="q2" value="निर्गमन"> निर्गमन<br>
-        <input type="radio" name="q2" value="भजन संहिता"> भजन संहिता<br>
-        <input type="radio" name="q2" value="मती"> मती<br><br>
-      </li>
+        <li>बाइबल के पहले पुस्तक का नाम क्या है?<br>
+          <input type="radio" name="q2" value="उत्पत्ति"> उत्पत्ति<br>
+          <input type="radio" name="q2" value="निर्गमन"> निर्गमन<br>
+          <input type="radio" name="q2" value="भजन संहिता"> भजन संहिता<br>
+          <input type="radio" name="q2" value="मती"> मती<br><br>
+        </li>
 
-      <li>यीशु ने कितने शिष्यों को चुना था?<br>
-        <input type="radio" name="q3" value="10"> 10<br>
-        <input type="radio" name="q3" value="70"> 70<br>
-        <input type="radio" name="q3" value="12"> 12<br>
-        <input type="radio" name="q3" value="7"> 7<br><br>
-      </li>
+        <!-- More questions can be added here as above... -->
 
-      <li>बाइबल कितने भागों में विभाजित है?<br>
-        <input type="radio" name="q4" value="तीन"> तीन<br>
-        <input type="radio" name="q4" value="पाँच"> पाँच<br>
-        <input type="radio" name="q4" value="दो"> दो<br>
-        <input type="radio" name="q4" value="चार"> चार<br><br>
-      </li>
+        <li>बाइबल के अनुसार परमेश्वर ________ है।<br>
+          <input type="radio" name="q15" value="न्यायी"> न्यायी<br>
+          <input type="radio" name="q15" value="क्रोधित"> क्रोधित<br>
+          <input type="radio" name="q15" value="प्रेम है"> प्रेम है<br>
+          <input type="radio" name="q15" value="रहस्यमय"> रहस्यमय<br><br>
+        </li>
+      </ol>
 
-      <li>‘प्रेम’ का अध्याय किस पुस्तक में आता है?<br>
-        <input type="radio" name="q5" value="मती 5"> मती 5<br>
-        <input type="radio" name="q5" value="1 कुरिन्थियों 13"> 1 कुरिन्थियों 13<br>
-        <input type="radio" name="q5" value="भजन संहिता 23"> भजन संहिता 23<br>
-        <input type="radio" name="q5" value="रोमियों 8"> रोमियों 8<br><br>
-      </li>
-
-      <li>बाइबल का सबसे लंबा भजन कौन-सा है?<br>
-        <input type="radio" name="q6" value="भजन संहिता 1"> भजन संहिता 1<br>
-        <input type="radio" name="q6" value="भजन संहिता 23"> भजन संहिता 23<br>
-        <input type="radio" name="q6" value="भजन संहिता 91"> भजन संहिता 91<br>
-        <input type="radio" name="q6" value="भजन संहिता 119"> भजन संहिता 119<br><br>
-      </li>
-
-      <li>यीशु मसीह को किसने धोखा दिया था?<br>
-        <input type="radio" name="q7" value="पतरस"> पतरस<br>
-        <input type="radio" name="q7" value="यूहन्ना"> यूहन्ना<br>
-        <input type="radio" name="q7" value="यहूदा"> यहूदा<br>
-        <input type="radio" name="q7" value="थोमा"> थोमा<br><br>
-      </li>
-
-      <li>किसने जल में चलने की कोशिश की थी लेकिन डर के कारण डूबने लगा?<br>
-        <input type="radio" name="q8" value="यूहन्ना"> यूहन्ना<br>
-        <input type="radio" name="q8" value="पतरस"> पतरस<br>
-        <input type="radio" name="q8" value="थॉमस"> थॉमस<br>
-        <input type="radio" name="q8" value="याकूब"> याकूब<br><br>
-      </li>
-
-      <li>यीशु का जन्म किस कुँवारी से हुआ था?<br>
-        <input type="radio" name="q9" value="माथा"> माथा<br>
-        <input type="radio" name="q9" value="मरियम"> मरियम<br>
-        <input type="radio" name="q9" value="मरियम मगदलीनी"> मरियम मगदलीनी<br>
-        <input type="radio" name="q9" value="सारा"> सारा<br><br>
-      </li>
-
-      <li>बाइबल की अंतिम पुस्तक का नाम क्या है?<br>
-        <input type="radio" name="q10" value="यशायाह"> यशायाह<br>
-        <input type="radio" name="q10" value="रोमियों"> रोमियों<br>
-        <input type="radio" name="q10" value="प्रकाशितवाक्य"> प्रकाशितवाक्य<br>
-        <input type="radio" name="q10" value="मती"> मती<br><br>
-      </li>
-
-      <li>परमेश्वर ने संसार को किसके द्वारा रचा?<br>
-        <input type="radio" name="q11" value="मूसा"> मूसा<br>
-        <input type="radio" name="q11" value="अब्राहम"> अब्राहम<br>
-        <input type="radio" name="q11" value="वचन"> वचन<br>
-        <input type="radio" name="q11" value="नूह"> नूह<br><br>
-      </li>
-
-      <li>मसीही विश्वास के अनुसार उद्धार किसके द्वारा होता है?<br>
-        <input type="radio" name="q12" value="अच्छे कर्मों से"> अच्छे कर्मों से<br>
-        <input type="radio" name="q12" value="पैसे से"> पैसे से<br>
-        <input type="radio" name="q12" value="विश्वास द्वारा"> विश्वास द्वारा<br>
-        <input type="radio" name="q12" value="उपवास से"> उपवास से<br><br>
-      </li>
-
-      <li>किसके द्वारा दस आज्ञाएँ दी गई थीं?<br>
-        <input type="radio" name="q13" value="अब्राहम"> अब्राहम<br>
-        <input type="radio" name="q13" value="मूसा"> मूसा<br>
-        <input type="radio" name="q13" value="दाऊद"> दाऊद<br>
-        <input type="radio" name="q13" value="एलीयाह"> एलीयाह<br><br>
-      </li>
-
-      <li>किसने कहा, "मैं और मेरा घराना यहोवा की सेवा करेंगे"?<br>
-        <input type="radio" name="q14" value="यहोशू"> यहोशू<br>
-        <input type="radio" name="q14" value="सुलैमान"> सुलैमान<br>
-        <input type="radio" name="q14" value="पतरस"> पतरस<br>
-        <input type="radio" name="q14" value="याकूब"> याकूब<br><br>
-      </li>
-
-      <li>बाइबल के अनुसार परमेश्वर ________ है।<br>
-        <input type="radio" name="q15" value="न्यायी"> न्यायी<br>
-        <input type="radio" name="q15" value="क्रोधित"> क्रोधित<br>
-        <input type="radio" name="q15" value="प्रेम है"> प्रेम है<br>
-        <input type="radio" name="q15" value="रहस्यमय"> रहस्यमय<br><br>
-      </li>
-    </ol>
-
-    <button type="submit">प्रेषित करें</button>
-  </form>
+      <button type="submit">प्रेषित करें</button>
+    </form>
+  </div>
 
   <script>
-    const scriptURL = "https://script.google.com/macros/s/AKfycbzW6Y5qftTwC98n5pOtYDm5cagMyTq5rj3IVLMHVZowlJ4VYP-qIjECAW_i0WHMX8Jv/exec";  // Replace this with your actual script URL
+    function doPost(e) {
+  var sheet = SpreadsheetApp.getActiveSheet();
+  var data = JSON.parse(e.postData.contents);
+  sheet.appendRow([new Date(), data.name, ...data.answers]);
+  return ContentService.createTextOutput("Submitted");
+}
 
     document.getElementById("quizForm").addEventListener("submit", function(e) {
       e.preventDefault();
