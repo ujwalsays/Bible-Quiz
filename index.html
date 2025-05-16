@@ -1,136 +1,131 @@
-
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>✝️ Emmanual Ministry Bible Quiz ✝️</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to bottom right, #e8eaf6, #f3e5f5);
-      color: #333;
-      padding: 20px;
-      margin: 0;
-    }
-    .container {
-      max-width: 800px;
-      margin: auto;
-      background-color: white;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    }
-    h2 {
-      text-align: center;
-      color: #4a148c;
-    }
-    p {
-      text-align: center;
-      font-size: 1.1em;
-    }
-    label, li {
-      font-weight: bold;
-    }
-    button {
-      display: block;
-      width: 100%;
-      padding: 12px;
-      margin-top: 20px;
-      background-color: #4a148c;
-      color: white;
-      font-size: 16px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #6a1b9a;
-    }
-    input[type="text"] {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0 20px 0;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-    }
-    ol {
-      padding-left: 20px;
-    }
-    li {
-      margin-bottom: 15px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✝️ Emmanual Ministry Online Exam ✝️</title>
+    <style>
+        body { font-family: 'Times New Roman', serif; background-color: #f9f5e3; margin: 20px; padding: 20px; }
+        .container { max-width: 800px; margin: auto; padding: 20px; background-color: #fff3cd; border-radius: 10px; box-shadow: 0px 0px 10px #7a6233; }
+        h2 { text-align: center; color: #6b4226; }
+        h3 { color: #5a3722; border-bottom: 2px solid #7a6233; padding-bottom: 5px; }
+        label { display: block; margin-top: 10px; font-weight: bold; }
+        input, select { margin-bottom: 10px; padding: 5px; width: 100%; border: 1px solid #7a6233; }
+        .question { margin-bottom: 15px; }
+        button { background-color: #6b4226; color: white; padding: 10px; font-size: 16px; border: none; cursor: pointer; }
+        button:hover { background-color: #5a3722; }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <h2>✝️ Emmanual Ministry Online Exam (ऑनलाइन परीक्षा) ✝️</h2>
-    <p>विषय: बाइबल ज्ञान | कुल अंक: 30 | समय: 30 मिनट</p>
 
-    <form id="quizForm">
-      <label for="name">नाम:</label>
-      <input type="text" id="name" name="name" required>
+    <div class="container">
+        <h2>✝️ Emmanual Ministry Online Exam ✝️</h2>
+        <p><b>नाम:</b> <input type="text" name="name" required></p>
+        <p><b>कुल अंक:</b> 30 | <b>समय:</b> 30 मिनट</p>
+        
+        <form action="submit.php" method="post">
+            <h3>खंड A: सही उत्तर पर टिक करें (Tick the correct answer)</h3>
 
-      <ol>
-        <li>यीशु मसीह का जन्म कहाँ हुआ था?<br>
-          <input type="radio" name="q1" value="यरूशलेम"> यरूशलेम<br>
-          <input type="radio" name="q1" value="नासरत"> नासरत<br>
-          <input type="radio" name="q1" value="बैतलहम"> बैतलहम<br>
-          <input type="radio" name="q1" value="मिश्र"> मिश्र<br><br>
-        </li>
+            <div class="question">
+                <label>1. यीशु मसीह का जन्म कहाँ हुआ था?</label>
+                <input type="radio" name="q1" value="यरुशलेम"> यरुशलेम
+                <input type="radio" name="q1" value="नासरत"> नासरत
+                <input type="radio" name="q1" value="बैतलहम"> बैतलहम
+                <input type="radio" name="q1" value="मिस्र"> मिस्र
+            </div>
 
-        <li>बाइबल के पहले पुस्तक का नाम क्या है?<br>
-          <input type="radio" name="q2" value="उत्पत्ति"> उत्पत्ति<br>
-          <input type="radio" name="q2" value="निर्गमन"> निर्गमन<br>
-          <input type="radio" name="q2" value="भजन संहिता"> भजन संहिता<br>
-          <input type="radio" name="q2" value="मती"> मती<br><br>
-        </li>
+            <div class="question">
+                <label>2. बाइबल के पहले पुस्तक का नाम क्या है?</label>
+                <input type="radio" name="q2" value="उत्पत्ति"> उत्पत्ति
+                <input type="radio" name="q2" value="निर्गमन"> निर्गमन
+                <input type="radio" name="q2" value="भजन संहिता"> भजन संहिता
+                <input type="radio" name="q2" value="मत्ती"> मत्ती
+            </div>
 
-        <!-- More questions can be added here as above... -->
+            <!-- Repeat similar structure for remaining multiple-choice questions -->
 
-        <li>बाइबल के अनुसार परमेश्वर ________ है।<br>
-          <input type="radio" name="q15" value="न्यायी"> न्यायी<br>
-          <input type="radio" name="q15" value="क्रोधित"> क्रोधित<br>
-          <input type="radio" name="q15" value="प्रेम है"> प्रेम है<br>
-          <input type="radio" name="q15" value="रहस्यमय"> रहस्यमय<br><br>
-        </li>
-      </ol>
+            <h3>खंड B: रिक्त स्थान भरें (Fill in the blanks)</h3>
 
-      <button type="submit">प्रेषित करें</button>
-    </form>
-  </div>
+            <div class="question">
+                <label>1. परमेश्वर ने संसार से _____ किया कि उसने अपना इकलौता पुत्र दे दिया।</label>
+                <input type="text" name="q16">
+            </div>
 
-  <script>
-    function doPost(e) {
-  var sheet = SpreadsheetApp.getActiveSheet();
-  var data = JSON.parse(e.postData.contents);
-  sheet.appendRow([new Date(), data.name, ...data.answers]);
-  return ContentService.createTextOutput("Submitted");
-}
+            <div class="question">
+                <label>2. नोहे ने _____ के निर्माण की आज्ञा पाई थी।</label>
+                <input type="text" name="q17">
+            </div>
 
-    document.getElementById("quizForm").addEventListener("submit", function(e) {
-      e.preventDefault();
-      const name = document.getElementById("name").value;
-      const answers = [];
-      for (let i = 1; i <= 15; i++) {
-        const answer = document.querySelector(`input[name="q${i}"]:checked`);
-        answers.push(answer ? answer.value : "");
-      }
+            <div class="question">
+                <label>3. यीशु ने _____ दिन बाद मृतकों में से पुनरुत्थान किया।</label>
+                <input type="text" name="q18">
+            </div>
 
-      fetch(scriptURL, {
-        method: "POST",
-        body: JSON.stringify({ name, answers }),
-        headers: {
-          "Content-Type": "application/json"
-        }
-      }).then(() => {
-        alert("आपके उत्तर सफलतापूर्वक सबमिट हो गए हैं। धन्यवाद!");
-        document.getElementById("quizForm").reset();
-      }).catch(err => {
-        alert("त्रुटि: उत्तर सबमिट नहीं हो पाए।");
-        console.error(err);
-      });
-    });
-  </script>
+            <div class="question">
+                <label>4. मूसा को दस आज्ञाएँ _____ पर्वत पर मिली थीं।</label>
+                <input type="text" name="q19">
+            </div>
+
+            <div class="question">
+                <label>5. दाऊद एक _____ था जब उसे परमेश्वर ने चुना।</label>
+                <input type="text" name="q20">
+            </div>
+
+            <h3>खंड D: रिक्त स्थान भरें (Fill in the blanks)</h3>
+
+            <div class="question">
+                <label>1. परमेश्वर ने _____ दिनों में सृष्टि की रचना की थी।</label>
+                <input type="text" name="q21">
+            </div>
+
+            <div class="question">
+                <label>2. बाइबल के अनुसार, पाप की मजदूरी _____ है।</label>
+                <input type="text" name="q22">
+            </div>
+
+            <div class="question">
+                <label>3. _____ नदी में यीशु ने बपतिस्मा लिया था।</label>
+                <input type="text" name="q23">
+            </div>
+
+            <div class="question">
+                <label>4. यीशु ने कहा, "मैं _____ हूँ और जीवन भी।"</label>
+                <input type="text" name="q24">
+            </div>
+
+            <div class="question">
+                <label>5. जब यीशु मसीह मरे, तब मंदिर का परदा _____ से _____ तक फट गया।</label>
+                <input type="text" name="q25">
+            </div>
+
+            <div class="question">
+                <label>6. अब्राहम को उसके विश्वास के कारण _____ कहा गया।</label>
+                <input type="text" name="q26">
+            </div>
+
+            <div class="question">
+                <label>7. बाइबल के अनुसार, बिना _____ के परमेश्वर को प्रसन्न करना असंभव है।</label>
+                <input type="text" name="q27">
+            </div>
+
+            <div class="question">
+                <label>8. शमूएल एक _____ था और परमेश्वर की आवाज़ सुनता था।</label>
+                <input type="text" name="q28">
+            </div>
+
+            <div class="question">
+                <label>9. परमेश्वर हमारा _____ और गढ़ है।</label>
+                <input type="text" name="q29">
+            </div>
+
+            <div class="question">
+                <label>10. यीशु ने कहा, "मैं _____ का मार्ग, सत्य और जीवन हूँ।"</label>
+                <input type="text" name="q30">
+            </div>
+
+            <button type="submit">सबमिट करें (Submit)</button>
+        </form>
+    </div>
+
 </body>
 </html>
