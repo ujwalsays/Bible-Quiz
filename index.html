@@ -1,158 +1,162 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-  <meta charset="UTF-8">
-  <title>Emmanuel Biblical Ministry Online Exam (ऑनलाइन बाइबिल परीक्षा)</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>बाइबल प्रश्नोत्तरी - कक्षा 4</title>
   <style>
     body {
-      background: linear-gradient(135deg, #f8f4e3, #d6bfa3);
-      font-family: 'EB Garamond', serif;
-      color: #3b2f2f;
       margin: 0;
-      padding: 0;
-    }
-    .container {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 32px;
-      background: rgba(255, 255, 255, 0.98);
-      border-radius: 20px;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-    }
-    h1, h2 {
-      text-align: center;
-      font-weight: 700;
-      margin-bottom: 20px;
-    }
-    .bible-icon {
-      display: block;
-      margin: 0 auto 20px auto;
-      width: 70px;
-    }
-    .section-title {
-      background: #e8d4bc;
-      padding: 12px;
-      border-radius: 10px;
-      margin: 32px 0 20px 0;
-      font-size: 1.3em;
-      text-align: center;
-      font-weight: bold;
-      letter-spacing: 1px;
-    }
-    .question-block {
-      margin-bottom: 28px;
+      font-family: 'Georgia', serif;
+      background: url('https://www.transparenttextures.com/patterns/paper-fibers.png') repeat;
+      background-color: #f9f3e3;
+      color: #4b2e14;
       padding: 20px;
-      background: #fff7ed;
-      border-radius: 10px;
-      border: 1px solid #d8b89b;
     }
-    .question {
-      font-size: 1.2em;
-      margin-bottom: 10px;
-      font-weight: 600;
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background-color: #fff8dc;
+      border: 3px solid #8b5e3c;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(75, 46, 20, 0.3);
+      padding: 30px;
     }
-    .options label {
+
+    h1 {
+      text-align: center;
+      color: #6a1b1b;
+      font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+      border-bottom: 2px solid #a0522d;
+      padding-bottom: 10px;
+    }
+
+    label {
+      font-weight: bold;
       display: block;
-      margin-bottom: 8px;
-      cursor: pointer;
+      margin-top: 20px;
+      font-size: 1.1em;
     }
-    input[type="text"] {
+
+    input[type="text"], select {
       width: 100%;
       padding: 10px;
-      border: 1px solid #c9a982;
-      border-radius: 6px;
-      font-size: 1em;
-      margin-top: 6px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #fffef2;
     }
-    button {
-      background: #8a5e3b;
-      color: #fff;
-      border: none;
-      padding: 14px 32px;
-      border-radius: 8px;
-      font-size: 1.1em;
-      cursor: pointer;
+
+    .question {
+      margin-top: 25px;
+    }
+
+    .options {
+      margin-left: 20px;
+    }
+
+    .options label {
+      font-weight: normal;
       display: block;
-      margin: 40px auto 0 auto;
-      font-family: inherit;
-      font-weight: bold;
-      transition: background 0.3s ease-in-out;
+      margin-bottom: 8px;
     }
+
+    .options input {
+      margin-right: 10px;
+    }
+
+    button {
+      background-color: #8b0000;
+      color: #fff;
+      padding: 12px 30px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin: 30px auto 0;
+      display: block;
+      transition: background-color 0.3s ease;
+    }
+
     button:hover {
-      background: #6e4628;
+      background-color: #5c0000;
     }
-    .score {
-      text-align: center;
-      font-size: 1.4em;
-      margin-top: 36px;
-      font-weight: bold;
-      color: #5c3d1e;
-    }
-    .bible-verse {
-      text-align: center;
-      font-style: italic;
-      color: #6e4628;
-      font-size: 1.1em;
-      margin-bottom: 30px;
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px;
+      }
+
+      button {
+        width: 100%;
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <img class="bible-icon" src="https://img.icons8.com/ios-filled/100/000000/bible.png" alt="Bible Icon"/>
-    <h1>Emmanuel Biblical Ministry Online Exam</h1>
-    <div class="bible-verse">"तेरा वचन मेरे पाँव के लिये दीपक, और मेरे मार्ग के लिये उजियाला है।" (भजन संहिता 119:105)</div>
-    <form id="quizForm">
-      <div class="section-title">खंड A: सही उत्तर पर टिक करें (15 प्रश्न)</div>
-      <!-- Sample Questions -->
-      <div class="question-block">
-        <div class="question">1. यीशु मसीह का जन्म कहाँ हुआ था?</div>
+    <h1>बाइबल प्रश्नोत्तरी - कक्षा 4</h1>
+    <form action="#" method="POST">
+      <label for="studentName">छात्र का नाम:</label>
+      <input type="text" id="studentName" name="studentName" required>
+
+      <label for="rollNumber">रोल नंबर:</label>
+      <input type="text" id="rollNumber" name="rollNumber" required>
+
+      <!-- Questions -->
+      <div class="question">
+        <label>1. यीशु मसीह कौन है?</label>
         <div class="options">
-          <label><input type="radio" name="mcq1" value="यरूशलेम"> यरूशलेम</label>
-          <label><input type="radio" name="mcq1" value="नासरत"> नासरत</label>
-          <label><input type="radio" name="mcq1" value="बैतलहम"> बैतलहम</label>
-          <label><input type="radio" name="mcq1" value="मिस्र"> मिस्र</label>
+          <label><input type="radio" name="q1" value="a" required> a) परमेश्वर का पुत्र</label>
+          <label><input type="radio" name="q1" value="b"> b) मनुष्य का पुत्र</label>
+          <label><input type="radio" name="q1" value="c"> c) राजा</label>
+          <label><input type="radio" name="q1" value="d"> d) सब सही हैं</label>
         </div>
       </div>
-      <!-- Add more question-blocks here for the rest of the questions (2 to 15) -->
 
-      <!-- Submit Button -->
-      <button type="submit">परीक्षा जमा करें</button>
-      <div class="score" id="scoreDisplay"></div>
+      <div class="question">
+        <label>2. बाइबल में कितनी पुस्तकें हैं?</label>
+        <div class="options">
+          <label><input type="radio" name="q2" value="a" required> a) 60</label>
+          <label><input type="radio" name="q2" value="b"> b) 65</label>
+          <label><input type="radio" name="q2" value="c"> c) 66</label>
+          <label><input type="radio" name="q2" value="d"> d) 70</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <label>3. यीशु मसीह कहाँ जन्मे थे?</label>
+        <div class="options">
+          <label><input type="radio" name="q3" value="a" required> a) नासरत</label>
+          <label><input type="radio" name="q3" value="b"> b) यरूशलेम</label>
+          <label><input type="radio" name="q3" value="c"> c) बैतलहम</label>
+          <label><input type="radio" name="q3" value="d"> d) मिस्र</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <label>4. बाइबल का पहला वाक्य क्या है?</label>
+        <div class="options">
+          <label><input type="radio" name="q4" value="a" required> a) प्रभु मेरा चरवाहा है</label>
+          <label><input type="radio" name="q4" value="b"> b) आरंभ में परमेश्वर ने आकाश और पृथ्वी की सृष्टि की</label>
+          <label><input type="radio" name="q4" value="c"> c) यीशु रोया</label>
+          <label><input type="radio" name="q4" value="d"> d) तू अपने परमेश्वर यहोवा से प्रेम रखना</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <label>5. बाइबल में सबसे छोटी आयत कौन सी है?</label>
+        <div class="options">
+          <label><input type="radio" name="q5" value="a" required> a) यीशु हँसा</label>
+          <label><input type="radio" name="q5" value="b"> b) यीशु दौड़ा</label>
+          <label><input type="radio" name="q5" value="c"> c) यीशु रोया</label>
+          <label><input type="radio" name="q5" value="d"> d) यीशु बैठा</label>
+        </div>
+      </div>
+
+      <button type="submit">प्रस्तुत करें</button>
     </form>
   </div>
-
-  <script>
-    const form = document.getElementById('quizForm');
-    const scoreDisplay = document.getElementById('scoreDisplay');
-
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      let score = 0;
-      const answers = {
-        mcq1: 'बैतलहम',
-        mcq2: 'उत्पत्ति',
-        mcq3: '12',
-        mcq4: 'दो',
-        mcq5: '1 कुरिन्थियों 13',
-        mcq6: 'भजन संहिता 119',
-        mcq7: 'यहूदा',
-        mcq8: 'पतरस',
-        mcq9: 'मरियम',
-        // Add remaining correct answers up to mcq15
-      };
-
-      for (let key in answers) {
-        const selected = form.elements[key]?.value;
-        if (selected === answers[key]) {
-          score++;
-        }
-      }
-
-      scoreDisplay.innerHTML = `आपका स्कोर: ${score} / ${Object.keys(answers).length}`;
-    });
-  </script>
 </body>
 </html>
