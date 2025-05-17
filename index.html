@@ -1,131 +1,382 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>✝️ Emmanual Ministry Online Exam ✝️</title>
-    <style>
-        body { font-family: 'Times New Roman', serif; background-color: #f9f5e3; margin: 20px; padding: 20px; }
-        .container { max-width: 800px; margin: auto; padding: 20px; background-color: #fff3cd; border-radius: 10px; box-shadow: 0px 0px 10px #7a6233; }
-        h2 { text-align: center; color: #6b4226; }
-        h3 { color: #5a3722; border-bottom: 2px solid #7a6233; padding-bottom: 5px; }
-        label { display: block; margin-top: 10px; font-weight: bold; }
-        input, select { margin-bottom: 10px; padding: 5px; width: 100%; border: 1px solid #7a6233; }
-        .question { margin-bottom: 15px; }
-        button { background-color: #6b4226; color: white; padding: 10px; font-size: 16px; border: none; cursor: pointer; }
-        button:hover { background-color: #5a3722; }
-    </style>
+  <meta charset="UTF-8">
+  <title>Emmanual Ministry Online Exam (ऑनलाइन परीक्षा)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Fonts for Bible-like look -->
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(135deg, #fbeee6 0%, #e0c3a3 100%);
+      font-family: 'EB Garamond', serif;
+      color: #3e2723;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 32px;
+      background: rgba(255,255,255,0.95);
+      border-radius: 18px;
+      box-shadow: 0 8px 32px rgba(60,40,20,0.15);
+    }
+    h1, h2 {
+      text-align: center;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .bible-icon {
+      display: block;
+      margin: 0 auto 16px auto;
+      width: 64px;
+    }
+    .section-title {
+      background: #e0c3a3;
+      padding: 10px 0;
+      border-radius: 8px;
+      margin: 32px 0 16px 0;
+      font-size: 1.2em;
+      text-align: center;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    .question-block {
+      margin-bottom: 24px;
+      padding: 18px;
+      background: #f5e7d5;
+      border-radius: 8px;
+      border: 1px solid #d2b48c;
+    }
+    .question {
+      font-size: 1.1em;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+    .options label {
+      display: block;
+      margin-bottom: 6px;
+      cursor: pointer;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #bfa980;
+      border-radius: 5px;
+      font-size: 1em;
+      margin-top: 6px;
+    }
+    button {
+      background: #a67c52;
+      color: #fff;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 6px;
+      font-size: 1.1em;
+      cursor: pointer;
+      display: block;
+      margin: 32px auto 0 auto;
+      font-family: inherit;
+      font-weight: 700;
+      letter-spacing: 1px;
+      transition: background 0.2s;
+    }
+    button:hover {
+      background: #7e5c35;
+    }
+    .score {
+      text-align: center;
+      font-size: 1.3em;
+      margin-top: 32px;
+      font-weight: bold;
+      color: #4b2e09;
+    }
+    .bible-verse {
+      text-align: center;
+      font-style: italic;
+      color: #7e5c35;
+      margin-bottom: 24px;
+    }
+  </style>
 </head>
 <body>
+  <div class="container">
+    <img class="bible-icon" src="https://img.icons8.com/ios-filled/100/000000/bible.png" alt="Bible Icon"/>
+    <h1>Emmanual Ministry Online Exam</h1>
+    <div class="bible-verse">"तेरा वचन मेरे पाँव के लिये दीपक, और मेरे मार्ग के लिये उजियाला है।" (भजन संहिता 119:105)</div>
+    <form id="quizForm">
+      <div class="section-title">खंड A: सही उत्तर पर टिक करें (15 प्रश्न)</div>
+      <!-- Multiple Choice Questions -->
+      <div class="question-block">
+        <div class="question">1. यीशु मसीह का जन्म कहाँ हुआ था?</div>
+        <div class="options">
+          <label><input type="radio" name="mcq1" value="यरूशलेम"> यरूशलेम</label>
+          <label><input type="radio" name="mcq1" value="नासरत"> नासरत</label>
+          <label><input type="radio" name="mcq1" value="बैतलहम"> बैतलहम</label>
+          <label><input type="radio" name="mcq1" value="मिस्र"> मिस्र</label>
+        </div>
+      </div>
+      <div class="question-block">
+        <div class="question">2. बाइबल के पहले पुस्तक का नाम क्या है?</div>
+        <div class="options">
+          <label><input type="radio" name="mcq2" value="उत्पत्ति"> उत्पत्ति</label>
+          <label><input type="radio" name="mcq2" value="निर्गमन"> निर्गमन</label>
+          <label><input type="radio" name="mcq2" value="भजन संहिता"> भजन संहिता</label>
+          <label><input type="radio" name="mcq2" value="मत्ती"> मत्ती</label>
+        </div>
+      </div>
+      <div class="question-block">
+        <div class="question">3. यीशु ने कितने शिष्यों को चुना था?</div>
+        <div class="options">
+          <label><input type="radio" name="mcq3" value="10"> 10</label>
+          <label><input type="radio" name="mcq3" value="70"> 70</label>
+          <label><input type="radio" name="mcq3" value="12"> 12</label>
+          <label><input type="radio" name="mcq3" value="7"> 7</label>
+        </div>
+      </div>
+      <div class="question-block">
+        <div class="question">4. बाइबल कितने भागों में विभाजित है?</div>
+        <div class="options">
+          <label><input type="radio" name="mcq4" value="तीन"> तीन</label>
+          <label><input type="radio" name="mcq4" value="पाँच"> पाँच</label>
+          <label><input type="radio" name="mcq4" value="दो"> दो</label>
+          <label><input type="radio" name="mcq4" value="चार"> चार</label>
+        </div>
+      </div>
+      <div class="question-block">
+        <div class="question">5. ‘प्रेम’ का अध्याय किस पुस्तक में आता है?</div>
+        <div class="options">
+          <label><input type="radio" name="mcq5" value="मत्ती 5"> मत्ती 5</label>
+          <label><input type="radio" name="mcq5" value="1 कुरिन्थियों 13"> 1 कुरिन्थियों 13</label>
+          <label><input type="radio" name="mcq5" value="भजन संहिता 23"> भजन संहिता 23</label>
+          <label><input type="radio" name="mcq5" value="रोमियों 8"> रोमियों 8</label>
+        </div>
+      </div>
+      <div class="question-block">
+        <div class="question">6. बाइबल का सबसे लंबा भजन कौन-सा है?</div>
+        <div class="options">
+          <label><input type="radio" name="mcq6" value="भजन संहिता 1"> भजन संहिता 1</label>
+          <label><input type="radio" name="mcq6" value="भजन संहिता 23"> भजन संहिता 23</label>
+          <label><input type="radio" name="mcq6" value="भजन संहिता 91"> भजन संहिता 91</label>
+          <label><input type="radio" name="mcq6" value="भजन संहिता 119"> भजन संहिता 119</label>
+        </div>
+      </div>
+      <div class="question-block">
+        <div class="question">7. यीशु मसीह को किसने धोखा दिया था?</div>
+        <div class="options">
+          <label><input type="radio" name="mcq7" value="पतरस"> पतरस</label>
+          <label><input type="radio" name="mcq7" value="यूहन्ना"> यूहन्ना</label>
+          <label><input type="radio" name="mcq7" value="यहूदा"> यहूदा</label>
+          <label><input type="radio" name="mcq7" value="थोमा"> थोमा</label>
+        </div>
+      </div>
+      <div class="question-block">
+        <div class="question">8. किसने जल में चलने की कोशिश की थी लेकिन डर के कारण डूबने लगा?</div>
+        <div class="options">
+          <label><input type="radio" name="mcq8" value="यूहन्ना"> यूहन्ना</label>
+          <label><input type="radio" name="mcq8" value="पतरस"> पतरस</label>
+          <label><input type="radio" name="mcq8" value="थॉमस"> थॉमस</label>
+          <label><input type="radio" name="mcq8" value="याकूब"> याकूब</label>
+        </div>
+      </div>
+      <div class="question-block">
+        <div class="question">9. यीशु का जन्म किस कुँवारी से हुआ था?</div>
+        <div class="options">
+          <label><input type="radio" name="mcq9" value="मार्था"> मार्था</label>
+          <label><input type="radio" name="mcq9" value="मरियम"> मरियम</label>
+          <label><input type="radio" name="mcq9" value="मरियम मगदलीनी"> मरियम मगदलीनी</label>
+          <label><input type="radio" name="mcq9" value="सारा"> सारा</label>
+        </div>
+      </div>
+      <div class="question-block">
+        <div class="question">10. बाइबल की अंतिम पुस्तक का नाम क्या है?</div>
+        <div class="options">
+          <label><input type="radio" name="mcq10" value="यशायाह"> यशायाह</label>
+          <label><input type="radio" name="mcq10" value="रोमियों"> रोमियों</label>
+          <label><input type="radio" name="mcq10" value="प्रकाशितवाक्य"> प्रकाशितवाक्य</label>
+          <label><input type="radio" name="mcq10" value="मत्ती"> मत्ती</label>
+        </div>
+      </div>
+      <div class="question-block">
+        <div class="question">11. परमेश्वर ने संसार को किसके द्वारा रचा?</div>
+        <div class="options">
+          <label><input type="radio" name="mcq11" value="मूसा"> मूसा</label>
+          <label><input type="radio" name="mcq11" value="अब्राहम"> अब्राहम</label>
+          <label><input type="radio" name="mcq11" value="वचन (Word)"> वचन (Word)</label>
+          <label><input type="radio" name="mcq11" value="नूह"> नूह</label>
+        </div>
+      </div>
+      <div class="question-block">
+        <div class="question">12. मसीही विश्वास के अनुसार उद्धार किसके द्वारा होता है?</div>
+        <div class="options">
+          <label><input type="radio" name="mcq12" value="अच्छे कर्मों से"> अच्छे कर्मों से</label>
+          <label><input type="radio" name="mcq12" value="पैसे से"> पैसे से</label>
+          <label><input type="radio" name="mcq12" value="विश्वास द्वारा"> विश्वास द्वारा</label>
+          <label><input type="radio" name="mcq12" value="उपवास से"> उपवास से</label>
+        </div>
+      </div>
+      <div class="question-block">
+        <div class="question">13. किसके द्वारा दस आज्ञाएँ दी गई थीं?</div>
+        <div class="options">
+          <label><input type="radio" name="mcq13" value="अब्राहम"> अब्राहम</label>
+          <label><input type="radio" name="mcq13" value="मूसा"> मूसा</label>
+          <label><input type="radio" name="mcq13" value="दाऊद"> दाऊद</label>
+          <label><input type="radio" name="mcq13" value="एलिय्याह"> एलिय्याह</label>
+        </div>
+      </div>
+      <div class="question-block">
+        <div class="question">14. किसने कहा, 'मैं और मेरा घराना यहोवा की सेवा करेंगे'?</div>
+        <div class="options">
+          <label><input type="radio" name="mcq14" value="यहोशू"> यहोशू</label>
+          <label><input type="radio" name="mcq14" value="सुलैमान"> सुलैमान</label>
+          <label><input type="radio" name="mcq14" value="पतरस"> पतरस</label>
+          <label><input type="radio" name="mcq14" value="याकूब"> याकूब</label>
+        </div>
+      </div>
+      <div class="question-block">
+        <div class="question">15. बाइबल के अनुसार परमेश्वर __________ हैं।</div>
+        <div class="options">
+          <label><input type="radio" name="mcq15" value="न्यायी"> न्यायी</label>
+          <label><input type="radio" name="mcq15" value="क्रोधित"> क्रोधित</label>
+          <label><input type="radio" name="mcq15" value="प्रेम हैं"> प्रेम हैं</label>
+          <label><input type="radio" name="mcq15" value="रहस्यमय"> रहस्यमय</label>
+        </div>
+      </div>
 
-    <div class="container">
-        <h2>✝️ Emmanual Ministry Online Exam ✝️</h2>
-        <p><b>नाम:</b> <input type="text" name="name" required></p>
-        <p><b>कुल अंक:</b> 30 | <b>समय:</b> 30 मिनट</p>
-        
-        <form action="submit.php" method="post">
-            <h3>खंड A: सही उत्तर पर टिक करें (Tick the correct answer)</h3>
+      <div class="section-title">खंड B: रिक्त स्थान भरें (5 प्रश्न)</div>
+      <!-- Fill in the Blanks Section B -->
+      <div class="question-block">
+        <div class="question">16. परमेश्वर ने संसार से ऐसा ______ किया कि उसने अपना इकलौता पुत्र दे दिया।</div>
+        <input type="text" name="fib1">
+      </div>
+      <div class="question-block">
+        <div class="question">17. नोहे ने __________ _________के निर्माण की आज्ञा पाई थी।</div>
+        <input type="text" name="fib2">
+      </div>
+      <div class="question-block">
+        <div class="question">18. यीशु ने _____________________ दिन बाद मृतकों में से पुनरुत्थान किया।</div>
+        <input type="text" name="fib3">
+      </div>
+      <div class="question-block">
+        <div class="question">19. मूसा को दस आज्ञाएँ ______________________________ पर्वत पर मिली थीं।</div>
+        <input type="text" name="fib4">
+      </div>
+      <div class="question-block">
+        <div class="question">20. दाऊद एक _______________________ था जब उसे परमेश्वर ने चुना।</div>
+        <input type="text" name="fib5">
+      </div>
 
-            <div class="question">
-                <label>1. यीशु मसीह का जन्म कहाँ हुआ था?</label>
-                <input type="radio" name="q1" value="यरुशलेम"> यरुशलेम
-                <input type="radio" name="q1" value="नासरत"> नासरत
-                <input type="radio" name="q1" value="बैतलहम"> बैतलहम
-                <input type="radio" name="q1" value="मिस्र"> मिस्र
-            </div>
+      <div class="section-title">खंड D: रिक्त स्थान भरें (10 प्रश्न)</div>
+      <!-- Fill in the Blanks Section D -->
+      <div class="question-block">
+        <div class="question">21. परमेश्वर ने _________________ दिनों में सृष्टि की रचना की थी।</div>
+        <input type="text" name="fib6">
+      </div>
+      <div class="question-block">
+        <div class="question">22. बाइबल के अनुसार, पाप की मजदूरी __________________ है।</div>
+        <input type="text" name="fib7">
+      </div>
+      <div class="question-block">
+        <div class="question">23. _________________ नदी में यीशु ने बपतिस्मा लिया था।</div>
+        <input type="text" name="fib8">
+      </div>
+      <div class="question-block">
+        <div class="question">24. यीशु ने कहा, 'मैं _________________ हूँ और जीवन भी।'</div>
+        <input type="text" name="fib9">
+      </div>
+      <div class="question-block">
+        <div class="question">25. जब यीशु मसीह मरे, तब मंदिर का परदा ________________ से __________ तक फट गया।</div>
+        <input type="text" name="fib10">
+      </div>
+      <div class="question-block">
+        <div class="question">26. अब्राहम को उसके विश्वास के कारण _________________ कहा गया।</div>
+        <input type="text" name="fib11">
+      </div>
+      <div class="question-block">
+        <div class="question">27. बाइबल के अनुसार, बिना _________________ के परमेश्वर को प्रसन्न करना असंभव है।</div>
+        <input type="text" name="fib12">
+      </div>
+      <div class="question-block">
+        <div class="question">28. शमूएल एक ________________________________ था और परमेश्वर की आवाज़ सुनता था।</div>
+        <input type="text" name="fib13">
+      </div>
+      <div class="question-block">
+        <div class="question">29. परमेश्वर हमारा ____________________ और गढ़ है।</div>
+        <input type="text" name="fib14">
+      </div>
+      <div class="question-block">
+        <div class="question">30. यीशु ने कहा, 'मैं _________________ का मार्ग, सत्य और जीवन हूँ।'</div>
+        <input type="text" name="fib15">
+      </div>
 
-            <div class="question">
-                <label>2. बाइबल के पहले पुस्तक का नाम क्या है?</label>
-                <input type="radio" name="q2" value="उत्पत्ति"> उत्पत्ति
-                <input type="radio" name="q2" value="निर्गमन"> निर्गमन
-                <input type="radio" name="q2" value="भजन संहिता"> भजन संहिता
-                <input type="radio" name="q2" value="मत्ती"> मत्ती
-            </div>
+      <button type="submit">उत्तर सबमिट करें</button>
+    </form>
+    <div class="score" id="score"></div>
+  </div>
+  <script>
+    const answers = {
+      mcq1: "बैतलहम",
+      mcq2: "उत्पत्ति",
+      mcq3: "12",
+      mcq4: "दो",
+      mcq5: "1 कुरिन्थियों 13",
+      mcq6: "भजन संहिता 119",
+      mcq7: "यहूदा",
+      mcq8: "पतरस",
+      mcq9: "मरियम",
+      mcq10: "प्रकाशितवाक्य",
+      mcq11: "वचन (Word)",
+      mcq12: "विश्वास द्वारा",
+      mcq13: "मूसा",
+      mcq14: "यहोशू",
+      mcq15: "प्रेम हैं",
+      fib1: ["प्रेम"],
+      fib2: ["जहाज", "नाव"],
+      fib3: ["तीन", "3"],
+      fib4: ["सीनै"],
+      fib5: ["चरवाहा"],
+      fib6: ["छह", "6"],
+      fib7: ["मृत्यु"],
+      fib8: ["यर्दन"],
+      fib9: ["मार्ग"],
+      fib10: ["ऊपर से नीचे", "ऊपर नीचे", "ऊपर", "नीचे"],
+      fib11: ["मित्र"],
+      fib12: ["विश्वास"],
+      fib13: ["भविष्यद्वक्ता"],
+      fib14: ["शरणस्थान"],
+      fib15: ["स्वर्ग"]
+    };
 
-            <!-- Repeat similar structure for remaining multiple-choice questions -->
-
-            <h3>खंड B: रिक्त स्थान भरें (Fill in the blanks)</h3>
-
-            <div class="question">
-                <label>1. परमेश्वर ने संसार से _____ किया कि उसने अपना इकलौता पुत्र दे दिया।</label>
-                <input type="text" name="q16">
-            </div>
-
-            <div class="question">
-                <label>2. नोहे ने _____ के निर्माण की आज्ञा पाई थी।</label>
-                <input type="text" name="q17">
-            </div>
-
-            <div class="question">
-                <label>3. यीशु ने _____ दिन बाद मृतकों में से पुनरुत्थान किया।</label>
-                <input type="text" name="q18">
-            </div>
-
-            <div class="question">
-                <label>4. मूसा को दस आज्ञाएँ _____ पर्वत पर मिली थीं।</label>
-                <input type="text" name="q19">
-            </div>
-
-            <div class="question">
-                <label>5. दाऊद एक _____ था जब उसे परमेश्वर ने चुना।</label>
-                <input type="text" name="q20">
-            </div>
-
-            <h3>खंड D: रिक्त स्थान भरें (Fill in the blanks)</h3>
-
-            <div class="question">
-                <label>1. परमेश्वर ने _____ दिनों में सृष्टि की रचना की थी।</label>
-                <input type="text" name="q21">
-            </div>
-
-            <div class="question">
-                <label>2. बाइबल के अनुसार, पाप की मजदूरी _____ है।</label>
-                <input type="text" name="q22">
-            </div>
-
-            <div class="question">
-                <label>3. _____ नदी में यीशु ने बपतिस्मा लिया था।</label>
-                <input type="text" name="q23">
-            </div>
-
-            <div class="question">
-                <label>4. यीशु ने कहा, "मैं _____ हूँ और जीवन भी।"</label>
-                <input type="text" name="q24">
-            </div>
-
-            <div class="question">
-                <label>5. जब यीशु मसीह मरे, तब मंदिर का परदा _____ से _____ तक फट गया।</label>
-                <input type="text" name="q25">
-            </div>
-
-            <div class="question">
-                <label>6. अब्राहम को उसके विश्वास के कारण _____ कहा गया।</label>
-                <input type="text" name="q26">
-            </div>
-
-            <div class="question">
-                <label>7. बाइबल के अनुसार, बिना _____ के परमेश्वर को प्रसन्न करना असंभव है।</label>
-                <input type="text" name="q27">
-            </div>
-
-            <div class="question">
-                <label>8. शमूएल एक _____ था और परमेश्वर की आवाज़ सुनता था।</label>
-                <input type="text" name="q28">
-            </div>
-
-            <div class="question">
-                <label>9. परमेश्वर हमारा _____ और गढ़ है।</label>
-                <input type="text" name="q29">
-            </div>
-
-            <div class="question">
-                <label>10. यीशु ने कहा, "मैं _____ का मार्ग, सत्य और जीवन हूँ।"</label>
-                <input type="text" name="q30">
-            </div>
-
-            <button type="submit">सबमिट करें (Submit)</button>
-        </form>
-    </div>
-
+    document.getElementById('quizForm').onsubmit = function(e) {
+      e.preventDefault();
+      let score = 0;
+      // MCQs
+      for(let i=1; i<=15; i++) {
+        const q = document.querySelector('input[name="mcq'+i+'"]:checked');
+        if(q && q.value.trim() === answers['mcq'+i]) score++;
+      }
+      // FIBs
+      for(let i=1; i<=15; i++) {
+        const fib = document.querySelector('input[name="fib'+i+'"]');
+        if(fib && fib.value.trim() !== "") {
+          let userAns = fib.value.trim().replace(/ /g, "").toLowerCase();
+          let correct = answers['fib'+i];
+          if(Array.isArray(correct)) {
+            for(let ans of correct) {
+              if(userAns === ans.replace(/ /g, "").toLowerCase()) {
+                score++;
+                break;
+              }
+            }
+          } else {
+            if(userAns === correct.replace(/ /g, "").toLowerCase()) score++;
+          }
+        }
+      }
+      document.getElementById('score').innerHTML = `आपका स्कोर: <span style="color:#a67c52">${score}/30</span>`;
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    };
+  </script>
 </body>
 </html>
